@@ -9,6 +9,8 @@ const port = process.env.PORT ? process.env.PORT : 3000;
 
 const app = express();
 
+app.use(express.json());
+
 app.get("/film", (req, res) => {
   try {
     if (req.query.id <= 0 || req.query.id > 13) {
